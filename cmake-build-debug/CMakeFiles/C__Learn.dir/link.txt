@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/C__Learn.dir/main.cpp.o  -o C__Learn -lpthread 
