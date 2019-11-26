@@ -223,6 +223,15 @@ ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
 
+//The directory containing a CMake configuration file for Sqlite3.
+Sqlite3_DIR:PATH=Sqlite3_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for sqlite3.
+sqlite3_DIR:PATH=sqlite3_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for sqlite.
+sqlite_DIR:PATH=sqlite_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries
