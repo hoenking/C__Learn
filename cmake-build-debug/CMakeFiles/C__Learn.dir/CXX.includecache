@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/home/hoenking/CLionProjects/C++Learn/main.cpp
+/home/hoenking/CLionProjects/C++Learn/SqliteBase.cpp
+SqliteBase.h
+/home/hoenking/CLionProjects/C++Learn/SqliteBase.h
+basedef.h
+/home/hoenking/CLionProjects/C++Learn/basedef.h
 iostream
+-
+sstream
+-
+
+/home/hoenking/CLionProjects/C++Learn/SqliteBase.h
+sqlite3.h
 -
 string
 -
-vector
--
-sqlite3.h
--
+
+/home/hoenking/CLionProjects/C++Learn/basedef.h
 

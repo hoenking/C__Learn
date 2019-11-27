@@ -3,7 +3,7 @@ project(C__Learn)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(C__Learn main.cpp)
+add_executable(C__Learn main.cpp SqliteBase.cpp SqliteBase.h basedef.h)
 
 find_package(Threads REQUIRED)
 target_link_libraries(C__Learn LINK_PUBLIC Threads::Threads sqlite3)

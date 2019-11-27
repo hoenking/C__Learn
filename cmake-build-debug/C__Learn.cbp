@@ -80,6 +80,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/hoenking/CLionProjects/C++Learn/SqliteBase.cpp">
+			<Option target="C__Learn"/>
+		</Unit>
+		<Unit filename="/home/hoenking/CLionProjects/C++Learn/SqliteBase.h">
+			<Option target="C__Learn"/>
+		</Unit>
+		<Unit filename="/home/hoenking/CLionProjects/C++Learn/basedef.h">
+			<Option target="C__Learn"/>
+		</Unit>
 		<Unit filename="/home/hoenking/CLionProjects/C++Learn/main.cpp">
 			<Option target="C__Learn"/>
 		</Unit>

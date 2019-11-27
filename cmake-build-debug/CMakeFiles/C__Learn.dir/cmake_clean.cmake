@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/C__Learn.dir/SqliteBase.cpp.o"
   "CMakeFiles/C__Learn.dir/main.cpp.o"
   "C__Learn"
   "C__Learn.pdb"

@@ -2,14 +2,9 @@
 #include <string>
 #include <vector>
 #include <sqlite3.h>
+#include "basedef.h"
+#include "SqliteBase.h"
 
-#define ADD_CLASS_FIELD(type, name, getter, setter) \
-private:\
-    type m_##name;\
-public:\
-    type& getter(){return m_##name;}\
-    type const & getter() const {return m_##name;}\
-    void setter(type name){m_##name=name;}
 
 class TestModel
 {
@@ -70,41 +65,35 @@ class SqliteDB:public TestModel
 
     void func() override
     {
-        sqlite3* db;
-        std::string strName = "test.db";  //数据库句柄
-        char* zErrMsg;  //错误信息
+        const char* strName = "test.db";  //数据库
+        const char* strTable = "company";  //表
+        SqliteBase db{};
+        db.OpenDataBase(strName);
+        db.CreateOneTable(strTable, "ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, AGE TEXT NOT NULL, ADDRESS CHAR(50)");
 
-        //新创建或打开数据库
-        int res = sqlite3_open( strName.c_str(), &db);
+        //插入数据
+        const std::string strFields = "ID, NAME, AGE, ADDRESS";
+        std::vector<std::string> strValueList;
+        strValueList.emplace_back("1, 'Paul', 25, 'USA'");
+        strValueList.emplace_back("2, 'James', 28, 'JAP'");
+        strValueList.emplace_back("3, 'Yao', 30, 'CHA'");
+        strValueList.emplace_back("4, 'kobe', 38, 'USA'");
 
-        //如果打开失败返回否则继续
-        if(res)
-        {
-            fprintf(stderr, "Can't open database:%s\n", sqlite3_errmsg(db));
-            return;
-        }
-        else
-        {
-            fprintf(stderr,"open database succeddfully\n");
-        }
+        for(const auto& val:strValueList)
+            db.InsertRecord(strTable,strFields,val);
 
-        //创建company 数据表的 sql语句
-        const char* sql = "create table company(ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, AGE TEXT NOT NULL, ADDRESS CHAR(50))";
+        //查询
+        db.Search(strTable, "ID=2");
 
-        res = sqlite3_exec(db, sql, callback, nullptr, &zErrMsg); // 执行上面sql中的命令
+        //更新
+        db.Update(strTable, "ADDRESS", "CHA", "ID=4");
 
-        //sql执行结果判断
-        if(SQLITE_OK != res)
-        {
-            fprintf(stderr, "SQL error: %s\n", zErrMsg);
-        }
-        else
-        {
-            fprintf(stdout, "create table successfully\n");
-        }
+        //删除
+        db.Delete(strTable, "ADDRESS = 'JAP'");
 
         //关闭数据库
-        sqlite3_close(db);
+        //db.CloseDataBase();
+
     }
 };
 
@@ -124,9 +113,6 @@ public:
 
 int main()
 {
-//    Hello a;
-//    a.startThread();
-
     Factory factory;
     TestModel* model = nullptr;
 

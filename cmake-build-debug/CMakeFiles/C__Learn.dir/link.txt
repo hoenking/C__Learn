@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/C__Learn.dir/main.cpp.o  -o C__Learn -lsqlite3 -lpthread 
+/usr/bin/c++  -g   CMakeFiles/C__Learn.dir/main.cpp.o CMakeFiles/C__Learn.dir/SqliteBase.cpp.o  -o C__Learn -lsqlite3 -lpthread 

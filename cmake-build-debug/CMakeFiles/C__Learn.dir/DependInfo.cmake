@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/hoenking/CLionProjects/C++Learn/SqliteBase.cpp" "/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/C__Learn.dir/SqliteBase.cpp.o"
   "/home/hoenking/CLionProjects/C++Learn/main.cpp" "/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/C__Learn.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

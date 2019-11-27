@@ -123,6 +123,33 @@ C__Learn/fast:
 	$(MAKE) -f CMakeFiles/C__Learn.dir/build.make CMakeFiles/C__Learn.dir/build
 .PHONY : C__Learn/fast
 
+SqliteBase.o: SqliteBase.cpp.o
+
+.PHONY : SqliteBase.o
+
+# target to build an object file
+SqliteBase.cpp.o:
+	$(MAKE) -f CMakeFiles/C__Learn.dir/build.make CMakeFiles/C__Learn.dir/SqliteBase.cpp.o
+.PHONY : SqliteBase.cpp.o
+
+SqliteBase.i: SqliteBase.cpp.i
+
+.PHONY : SqliteBase.i
+
+# target to preprocess a source file
+SqliteBase.cpp.i:
+	$(MAKE) -f CMakeFiles/C__Learn.dir/build.make CMakeFiles/C__Learn.dir/SqliteBase.cpp.i
+.PHONY : SqliteBase.cpp.i
+
+SqliteBase.s: SqliteBase.cpp.s
+
+.PHONY : SqliteBase.s
+
+# target to generate assembly for a file
+SqliteBase.cpp.s:
+	$(MAKE) -f CMakeFiles/C__Learn.dir/build.make CMakeFiles/C__Learn.dir/SqliteBase.cpp.s
+.PHONY : SqliteBase.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... C__Learn"
 	@echo "... edit_cache"
+	@echo "... SqliteBase.o"
+	@echo "... SqliteBase.i"
+	@echo "... SqliteBase.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
