@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <pthread.h>
+#include <ctime>
+#include "sqlite3.h"
 
 #define ADD_CLASS_FIELD(type, name, getter, setter) \
 private:\
@@ -40,6 +43,15 @@ class Hello:public TestModel
 {
     void func() override
     {
+        int sec,i=0;
+        std::cin >> sec;
+        clock_t delay = sec * CLOCKS_PER_SEC;
+        clock_t start = clock();
+
+        while (clock()-start < delay) {
+            std::cout << "tick : " << i << std::endl;
+            i++;
+        }
         std::cout << "Hello Thread" << std::endl;
     }
 };
@@ -49,6 +61,9 @@ class CrossLine:public TestModel
     void func() override
     {
         std::cout << "Cross Line" << std::endl;
+        sqlite3* dbhandle;
+        sqlite3_open("test.db", &dbhandle);
+        sqlite3_close(dbhandle);
     }
 };
 
@@ -83,8 +98,8 @@ int main()
     factory.AddModel(model);
 
     for (auto l:factory.GetModelList()) {
-        l->func();
+        l->startThread();
     }
-
+    system("pause");
     return 0;
 }
