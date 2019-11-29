@@ -8,82 +8,97 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/hoenking/CLionProjects/C++Learn/cmake-build-debug"/>
+				<Option working_dir="D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/hoenking/CLionProjects/C++Learn/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="C__Learn">
-				<Option output="/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/C__Learn" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hoenking/CLionProjects/C++Learn/cmake-build-debug"/>
+				<Option output="D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/C__Learn.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8"/>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux"/>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 C__Learn"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 C__Learn"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="C__Learn/fast">
-				<Option output="/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/C__Learn" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/hoenking/CLionProjects/C++Learn/cmake-build-debug"/>
+				<Option output="D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/C__Learn.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8"/>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/x86_64-redhat-linux"/>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../include/c++/8/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/8/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 C__Learn/fast"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 C__Learn/fast"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/hoenking/CLionProjects/C++Learn/cmake-build-debug"/>
+				<Option working_dir="D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/hoenking/CLionProjects/C++Learn/main.cpp">
+		<Unit filename="D:/Users/hoenk/CLionProjects/C__Learn/SqliteBase.cpp">
 			<Option target="C__Learn"/>
 		</Unit>
-		<Unit filename="/home/hoenking/CLionProjects/C++Learn/CMakeLists.txt">
+		<Unit filename="D:/Users/hoenk/CLionProjects/C__Learn/SqliteBase.h">
+			<Option target="C__Learn"/>
+		</Unit>
+		<Unit filename="D:/Users/hoenk/CLionProjects/C__Learn/basedef.h">
+			<Option target="C__Learn"/>
+		</Unit>
+		<Unit filename="D:/Users/hoenk/CLionProjects/C__Learn/main.cpp">
+			<Option target="C__Learn"/>
+		</Unit>
+		<Unit filename="D:/Users/hoenk/CLionProjects/C__Learn/sqlite3.c">
+			<Option target="C__Learn"/>
+		</Unit>
+		<Unit filename="D:/Users/hoenk/CLionProjects/C__Learn/sqlite3.h">
+			<Option target="C__Learn"/>
+		</Unit>
+		<Unit filename="D:/Users/hoenk/CLionProjects/C__Learn/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

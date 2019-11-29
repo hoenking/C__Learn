@@ -3,15 +3,9 @@
 #include <vector>
 #include <pthread.h>
 #include <ctime>
-#include "sqlite3.h"
 
-#define ADD_CLASS_FIELD(type, name, getter, setter) \
-private:\
-    type m_##name;\
-public:\
-    type& getter(){return m_##name;}\
-    type const & getter() const {return m_##name;}\
-    void setter(type name){m_##name=name;}
+#include "basedef.h"
+#include "SqliteBase.h"
 
 class TestModel
 {
@@ -67,6 +61,55 @@ class CrossLine:public TestModel
     }
 };
 
+class SqliteDB:public TestModel
+{
+    // 暂时先不管 返回的数据
+    static int callback(void *NotUsed, int argc, char **argv, char **azColName)
+    {
+        int i = 0;
+        for(i = 0; i < argc; i++)
+        {
+            printf("%s = %s\n",azColName[i], argv[i]?argv[i]:"NULL");
+        }
+
+        printf("\n");
+        return 0;
+    }
+
+    void func() override
+    {
+        const char* strName = "test.db";  //数据库
+        const char* strTable = "company";  //表
+        SqliteBase db{};
+        db.OpenDataBase(strName);
+        db.CreateOneTable(strTable, "ID INT PRIMARY KEY NOT NULL, NAME TEXT NOT NULL, AGE TEXT NOT NULL, ADDRESS CHAR(50)");
+
+        //插入数据
+        const std::string strFields = "ID, NAME, AGE, ADDRESS";
+        std::vector<std::string> strValueList;
+        strValueList.emplace_back("1, 'Paul', 25, 'USA'");
+        strValueList.emplace_back("2, 'James', 28, 'JAP'");
+        strValueList.emplace_back("3, 'Yao', 30, 'CHA'");
+        strValueList.emplace_back("4, 'kobe', 38, 'USA'");
+
+        for(const auto& val:strValueList)
+            db.InsertRecord(strTable,strFields,val);
+
+        //查询
+        db.Search(strTable, "ID=2");
+
+        //更新
+        db.Update(strTable, "ADDRESS", "CHA", "ID=4");
+
+        //删除
+        db.Delete(strTable, "ADDRESS = 'JAP'");
+
+        //关闭数据库
+        //db.CloseDataBase();
+
+    }
+};
+
 class Factory
 {
     std::vector<TestModel*> ModelList;
@@ -95,6 +138,10 @@ int main()
 
     model = new CrossLine;
     model->setModelName("CrossLine");
+    factory.AddModel(model);
+
+    model = new SqliteDB;
+    model->setModelName("SqliteDB");
     factory.AddModel(model);
 
     for (auto l:factory.GetModelList()) {

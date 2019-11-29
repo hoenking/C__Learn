@@ -1,21 +1,23 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_21a58/fast && /usr/bin/gmake -f CMakeFiles/cmTC_21a58.dir/build.make CMakeFiles/cmTC_21a58.dir/build
-gmake[1]: Entering directory '/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_21a58.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_21a58.dir/src.c.o   -c /home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_21a58
-/home/hoenking/clion-2019.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21a58.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_21a58.dir/src.c.o  -o cmTC_21a58 
-CMakeFiles/cmTC_21a58.dir/src.c.o: In function `main':
-src.c:(.text+0x2d): undefined reference to `pthread_create'
-src.c:(.text+0x39): undefined reference to `pthread_detach'
-src.c:(.text+0x4a): undefined reference to `pthread_join'
-collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_21a58.dir/build.make:87: cmTC_21a58] Error 1
-gmake[1]: Leaving directory '/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:121: cmTC_21a58/fast] Error 2
+Run Build Command(s):C:/mingw64/bin/mingw32-make.exe cmTC_2a768/fast && C:/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_2a768.dir\build.make CMakeFiles/cmTC_2a768.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2a768.dir/src.c.obj
+C:\mingw64\bin\gcc.exe   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_2a768.dir\src.c.obj   -c D:\Users\hoenk\CLionProjects\C__Learn\cmake-build-debug\CMakeFiles\CMakeTmp\src.c
+Linking C executable cmTC_2a768.exe
+"D:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_2a768.dir\link.txt --verbose=1
+"D:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_2a768.dir/objects.a
+C:\mingw64\bin\ar.exe cr CMakeFiles\cmTC_2a768.dir/objects.a @CMakeFiles\cmTC_2a768.dir\objects1.rsp
+C:\mingw64\bin\gcc.exe  -DCMAKE_HAVE_LIBC_PTHREAD    -Wl,--whole-archive CMakeFiles\cmTC_2a768.dir/objects.a -Wl,--no-whole-archive  -o cmTC_2a768.exe -Wl,--out-implib,libcmTC_2a768.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_2a768.dir\linklibs.rsp
+CMakeFiles\cmTC_2a768.dir/objects.a(src.c.obj):src.c:(.text+0x35): undefined reference to `pthread_create'
+CMakeFiles\cmTC_2a768.dir/objects.a(src.c.obj):src.c:(.text+0x41): undefined reference to `pthread_detach'
+CMakeFiles\cmTC_2a768.dir/objects.a(src.c.obj):src.c:(.text+0x52): undefined reference to `pthread_join'
+CMakeFiles\cmTC_2a768.dir/objects.a(src.c.obj):src.c:(.text+0x5c): undefined reference to `pthread_exit'
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_2a768.dir\build.make:88: cmTC_2a768.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:120: cmTC_2a768/fast] Error 2
 
 
 Source file was:
@@ -39,20 +41,22 @@ int main(void)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a6a6a/fast && /usr/bin/gmake -f CMakeFiles/cmTC_a6a6a.dir/build.make CMakeFiles/cmTC_a6a6a.dir/build
-gmake[1]: Entering directory '/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a6a6a.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a6a6a.dir/CheckFunctionExists.c.o   -c /home/hoenking/clion-2019.2.5/bin/cmake/linux/share/cmake-3.15/Modules/CheckFunctionExists.c
-Linking C executable cmTC_a6a6a
-/home/hoenking/clion-2019.2.5/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6a6a.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a6a6a.dir/CheckFunctionExists.c.o  -o cmTC_a6a6a -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-gmake[1]: *** [CMakeFiles/cmTC_a6a6a.dir/build.make:87: cmTC_a6a6a] Error 1
-gmake[1]: Leaving directory '/home/hoenking/CLionProjects/C++Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:121: cmTC_a6a6a/fast] Error 2
+Run Build Command(s):C:/mingw64/bin/mingw32-make.exe cmTC_98d34/fast && C:/mingw64/bin/mingw32-make.exe -f CMakeFiles\cmTC_98d34.dir\build.make CMakeFiles/cmTC_98d34.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_98d34.dir/CheckFunctionExists.c.obj
+C:\mingw64\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles\cmTC_98d34.dir\CheckFunctionExists.c.obj   -c "D:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\share\cmake-3.15\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_98d34.exe
+"D:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_98d34.dir\link.txt --verbose=1
+"D:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_98d34.dir/objects.a
+C:\mingw64\bin\ar.exe cr CMakeFiles\cmTC_98d34.dir/objects.a @CMakeFiles\cmTC_98d34.dir\objects1.rsp
+C:\mingw64\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=pthread_create    -Wl,--whole-archive CMakeFiles\cmTC_98d34.dir/objects.a -Wl,--no-whole-archive  -o cmTC_98d34.exe -Wl,--out-implib,libcmTC_98d34.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_98d34.dir\linklibs.rsp
+C:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lpthreads
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_98d34.dir\build.make:88: cmTC_98d34.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'D:/Users/hoenk/CLionProjects/C__Learn/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:120: cmTC_98d34/fast] Error 2
 
 
 
